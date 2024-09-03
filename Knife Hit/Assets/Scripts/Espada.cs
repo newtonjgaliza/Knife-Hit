@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Espada : MonoBehaviour
 {
+
     [Header("Referências Gerais")]
     private Rigidbody2D oRigidbody2D;
 
@@ -48,10 +49,14 @@ public class Espada : MonoBehaviour
                 oRigidbody2D.gravityScale = 0f;
                 oRigidbody2D.bodyType = RigidbodyType2D.Static;
                 transform.SetParent(collider.gameObject.transform);
+
+                GameManager.Instance.QuandoAtingirAlvo();
             }
             else if(collider.gameObject.GetComponent<Espada>() != null)
             {
                 oRigidbody2D.velocity = Vector2.zero;
+
+                GameManager.Instance.QuandoAtingirEspada();
             }
 
             foiLancada = true;
