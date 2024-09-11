@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        UIManager.Instance.CarregarImagensDisponiveis(espadasDiponiveis);
         SpawnarNovaEspada();
     }
 
