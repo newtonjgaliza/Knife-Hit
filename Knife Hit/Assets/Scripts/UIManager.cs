@@ -10,6 +10,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject painelDasEspadas;
     [SerializeField] private GameObject imagemDaEspada;
 
+    [SerializeField] private GameObject painelFinal;
+    [SerializeField] private Text textoDoResultado;
 
     private void Awake()
     {
@@ -26,7 +28,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        painelFinal.SetActive(false);
     }
 
     public void CarregarImagensDisponiveis(int espadasDisponiveis)
@@ -42,5 +44,22 @@ public class UIManager : MonoBehaviour
          painelDasEspadas.transform.GetChild(espadaAtual).GetComponent<Image>().color = Color.black;
     }
 
- 
+    public void AtivarPainelFinal(bool venceu)
+    {
+        if (venceu == true)
+        {
+             textoDoResultado.text = "Você Venceu!";
+        }
+        else
+        {
+        textoDoResultado.text = "Você Perdeu";
+        }
+
+        painelFinal.SetActive(true);
+        
+    }
+    
+       
+
+
 }

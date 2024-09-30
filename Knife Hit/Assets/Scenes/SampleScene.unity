@@ -653,7 +653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1115544127
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1182,6 +1182,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   painelDasEspadas: {fileID: 1334838120}
   imagemDaEspada: {fileID: 4503820303614636460, guid: 8b66816f88e61e14ea141f622cd001f7, type: 3}
+  painelFinal: {fileID: 1115544126}
+  textoDoResultado: {fileID: 1137961981}
 --- !u!4 &1763772635
 Transform:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject espadaParaSpawnar;
     [SerializeField] private Vector2 posicaoInicialDaEspada = new Vector2(0f, -2f);
 
+    [SerializeField] private float tempoParaAtivarPainelFinal = 2f;
+
     void Awake()
     {
         if(Instance == null)
@@ -46,7 +48,7 @@ public class GameManager : MonoBehaviour
 
         if(espadasDiponiveis <= 0)
         {
-
+            StartCoroutine("AtivarPainelFinalCoroutine", true);
         }
         else
         {
@@ -56,7 +58,13 @@ public class GameManager : MonoBehaviour
 
     public void QuandoAtingirEspada()
     {
-        
+        StartCoroutine("AtivarPainelFinalCoroutine", false);
+    }
+
+    private IEnumerator AtivarPainelFinalCoroutine(bool venceu)
+    {
+        yield return new WaitForSeconds(tempoParaAtivarPainelFinal);
+        UIManager.Instance.AtivarPainelFinal(venceu);
     }
 
 }
