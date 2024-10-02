@@ -51,12 +51,14 @@ public class Espada : MonoBehaviour
                 transform.SetParent(collider.gameObject.transform);
 
                 GameManager.Instance.QuandoAtingirAlvo();
+                AudioManager.Instance.impactoAlvo.Play();
             }
             else if(collider.gameObject.GetComponent<Espada>() != null)
             {
                 oRigidbody2D.velocity = Vector2.zero;
 
                 GameManager.Instance.QuandoAtingirEspada();
+                AudioManager.Instance.impactoEspada.Play();
             }
 
             foiLancada = true;
