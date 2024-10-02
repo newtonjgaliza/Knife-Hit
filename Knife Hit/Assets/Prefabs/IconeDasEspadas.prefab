@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6016822945709654825}
   - component: {fileID: 6489866690426517345}
   m_Layer: 5
-  m_Name: ImagemDasEspadas
+  m_Name: IconeDasEspadas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

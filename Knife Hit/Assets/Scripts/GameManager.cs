@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        UIManager.Instance.CarregarImagensDisponiveis(espadasDiponiveis);
+        UIManager.Instance.CarregarIconesDisponiveis(espadasDiponiveis);
         SpawnarNovaEspada();
     }
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
 
     public void QuandoAtingirAlvo()
     {
-        UIManager.Instance.AtualizarImagemDaEspada(espadaAtual);
+        UIManager.Instance.AtualizarIconeDaEspada(espadaAtual);
 
         espadasDiponiveis--;
         espadaAtual++;

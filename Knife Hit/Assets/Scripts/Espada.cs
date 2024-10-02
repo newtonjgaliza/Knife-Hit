@@ -59,6 +59,8 @@ public class Espada : MonoBehaviour
 
                 GameManager.Instance.QuandoAtingirEspada();
                 AudioManager.Instance.impactoEspada.Play();
+
+                Destroy(this.gameObject, 3f);
             }
 
             foiLancada = true;
